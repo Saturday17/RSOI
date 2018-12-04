@@ -1,0 +1,77 @@
+.img IMG {
+	position: relative;
+}
+.team {
+			left: -160px; top: 5px; z-index: 1;
+}
+.team:hover {
+			left: -160px; top: 5px; z-index: 5;
+}
+.teamWh {
+			left: -540px; top: 30px; z-index: 3;
+}
+.zag {
+	position: absolute;
+	left: 300px;
+	top: 40px;
+	z-index: 4;
+	color: white;
+}
+.text{
+	position: absolute;
+	left: 300px;
+	top: 90px;
+	z-index: 4;
+	color: red;
+	word-wrap: break-all;
+	text-align: left;
+}
+.text2 {
+	height: 400px;
+	background-position: centre centre;
+	opacity: 0.7;
+	color: white;
+	background-origin: padding-box;
+}
+.anim {
+	width: 150px;
+	height: 150px;
+	margin: 30px auto;
+	z-index: 5;
+	animation-name: spin;
+	animation-duration: 5s;
+	animation-timing-function: ease;
+	animation-iteration-count: 3;
+}
+.anim:hover {
+	transform: scale(1.2);
+}
+@keyframes spin {
+	0% {
+		opacity: 1;
+		transform: translate(-800%, 0%)
+		rotate(0deg);
+	}
+	100% {
+		opacity: 0.2; 
+		transform: translate(0px, 0px)
+		rotate(1800deg);
+	}
+}
+.column {
+    column-width: 200px;
+	column-gap: 30px;
+	column-count: 2;
+	column-rule: 5px solid yellow;
+	animation-name: zat;
+	animation-duration: 5s;
+	animation-iteration-count: 3;
+}
+@keyframes zat {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}

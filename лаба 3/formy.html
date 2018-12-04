@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Формы JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2 align="center">Опрос туристов, об оказанных услугах турагенства:</h2>
+<div>
+	<article>
+		<form class="form" action="#" id="form" onsubmit="return false;">
+			<div class="div"><b>Введите ваш регистрационный код:</b> <input type="password" id="pas" required></div>
+			<div class="div"><b>Введите ваше имя:</b> <input type="text" id="name" required></div>
+			<div class="div">
+				<b>Вы гражданин РБ?</b>
+				<input type="radio" name="yes_not" id="yes" value="Да" required><label for="yes">Да</label>
+				<input type="radio" name="yes_not" id="not" value="Нет"><label for="not">Нет</label>
+			</div>
+			<div class="div">
+				<b>В какую страну вы отправились отдыхать?</b>
+					<select id="country" required>
+				    <option disabled selected></option>
+				    <option value="Япония">Япония</option>
+				    <option value="Мексика">Мексика</option>
+				    <option value="Испания">Испания</option>
+				    <option value="Франция">Франция</option>
+				    <option value="Германия">Германия</option>
+			   	</select>
+		   	</div>
+			<div class="div">
+				<b>Каким бонусом нашего агенства вы воспользовались?</b>
+				<input type="checkbox" name="1" id="s1"><label for="1">скидка на визу</label> 
+				<input type="checkbox" name="2" id="s2"><label for="2">страховка</label> 
+				<input type="checkbox" name="3" id="s3"><label for="3">разговорник</label>
+			</div>
+			<div class="div1">
+				<b>Ваши замечания и пожелания:</b>
+				<textarea rows="7" cols="40" class="textarea" id="comments"></textarea>
+			</div>
+			<div class="buttons">
+				<button type="reset">Очистить содержимое</button>
+			    <button id="submitForm" type="submit">Отправить и показать</button>
+			</div>
+			</form>
+	</article>
+</div>
+	<div class="modal" id="modal">
+	  <div class="content">
+	    <table id="table">
+	      <thead>
+	      <th>
+	        Имя
+	      </th>
+	      <th>
+	        из РБ
+	      </th>
+	      <th>
+	        Страна
+	      </th>
+	      <th>
+	        Бонусы
+	      </th>
+	      <th>
+	        Пожелания
+	      </th>
+	      </thead>
+	      <tbody id="tbody"></tbody>
+	    </table>
+		<div class="buttons">
+			<button id="close" type="button">Закрыть окно</button>
+   			<button id="back" type="button">Вернуться в предыдущее окно</button> 
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="formy.js"></script>
+</body>
+</html>
